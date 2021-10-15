@@ -1,6 +1,3 @@
-Noms du binôme: 
-	Emmanuel Gesche et Carole Merle
-
 Comment compiler/lancer le projet:
 	Plusieurs possibilités:
 		- Dans un terminal sur Linux ou Mac faire la commande: make et ensuite lancer le programme avec: ./test_board
@@ -18,9 +15,6 @@ Ce qu'on a fait:
 
 Ce qu'on a pas pu faire: 
 	Pas eu le courage de refactoriser le code qui est dans la grande boucle while malgré que pas mal de parties de code se ressemble. 
-
-Les bugs que vous n'avez pas réussi à corriger:
-	Aucun à moins qu'il y en ai qu'on a pas vu. 
 
 
 
