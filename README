@@ -1,0 +1,45 @@
+Noms du binôme: 
+	Emmanuel Gesche et Carole Merle
+
+Comment compiler/lancer le projet:
+	Plusieurs possibilités:
+		- Dans un terminal sur Linux ou Mac faire la commande: make et ensuite lancer le programme avec: ./test_board
+
+Comment se servir/tester le projet: 
+	Lorsqu'on lance le projet un objet ArbreDico contenant toutes les versions avec le signe '+' des mots du dictionnaire se créer (ça prend un peu de temps), puis le jeu de Scrabble se lance et joue tout seul et à chaque "tour" le plateau s'affiche avec le nouveau mot qui vient d'être joué sur le plateau ainsi que le score du mot en question et le score total (l'accumulation des scores de tous les mots sur le plateau). 
+
+	on peut decommenter la ligne 30 de test_board.cpp pour afficher tous les mots du dictionnaire contenus dans la structure de donnée ArbreDico.
+
+Ce qu'on a fait:
+	- on a créé une classe ArbreDico (le GADDAG plus ou moins) dont un objet contient toutes les versions avec le sign '+' des mots et peut être parcouru pour trouver des mots valides. 
+	- on a ajouté un methode a board pour pouvoir trouver toutes les cases libres à côté de cases occupées pour pouvoir savoir sur quelle case doit passer le mot que l'on va choisir de jouer sur le plateau.
+	- on a créé une classe Etat, un état est constitué d'un noeud de l'ArbreDico, du numéro de la case suivante sur laquelle on va continuer le parcours, d'une chaine de lettres que l'on a parcouru/ajouté jusqu'à arriver à l'état en question, un tableau qui contient les numéros des cases sur lesquelles chaque lettre de la chaine pourraient être si on decide de jouer ce mot (la chaine), et le sens d'exploration c'est-à-dire si l'état est un état qui contient une chaine de lettre à tester pour être mise verticalement sur le plateau ou horizontalement.
+	- dans le main on se sert d'objets etat pour pouvoir à l'aide de l'objet ArbreDico connaitre tous les mots possibles à jouer sur le plateau actuel à partir des lettres que l'on a. On met les états dans une pile et on teste chaque chaine de caratère de chaque état pour voir si la chaine est un mot valide et combien de points elle vaudrait si on la jouait et on garde l'état qui a la chaine qui fait le plus de points et quand la pile est vide et qu'il n'y a plus d'état à jouer on joue la chaine de l'etat qui a le meilleur score et ensuite on refait pareil avec les nouvelles lettres que le joueur obtient jusqu'à ce qu'il n'y ai plus de lettres ou que les lettres du joueur ne peuvent plus être jouées pour créer un mot. 
+
+Ce qu'on a pas pu faire: 
+	Pas eu le courage de refactoriser le code qui est dans la grande boucle while malgré que pas mal de parties de code se ressemble. 
+
+Les bugs que vous n'avez pas réussi à corriger:
+	Aucun à moins qu'il y en ai qu'on a pas vu. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
